@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Backend\AuthController;
+use App\Http\Controllers\Backend\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +22,7 @@ Route::get('blog', [HomeController::class, 'blog']);
 Route::get('blog-post', [HomeController::class, 'blogPost']);
 Route::get('contact', [HomeController::class, 'contact']);
 Route::get('portfolio', [HomeController::class, 'portfolio']);
+//Auth
+Route::get('login', [AuthController::class, 'login']);
+Route::get('forgot', [AuthController::class, 'forgot']);
+Route::get('admin/dashboard', [DashboardController::class, 'dashboard']);
